@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    background-color: #f0f0f0;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo img {
+    width: 100%;
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-right: 1rem;
+}
+
+.search-bar button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    width: 20px;
+    height: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.card {
+    width: 40%;
+    margin: 10px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.card-invisible {
+    display: none;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.card h2 {
+    font-weight: 100;
+    text-align: left;
+    text-decoration: underline;
+    margin-left: 15px;
+}
+
+.card p {
+    text-align: left;
+    margin: 5px;
+}
+
+.info-button {
+    position: sticky;
+    bottom: 10%;
+    right: 10px;  /* Position from the right edge */
+    color: #fff; /* Button text color */
+    background-color: #333; /* Button background color */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer; /* Set cursor to pointer on hover */
+    z-index: 10px;
+    display: none;
+  }
+.info-button h3{
+    font-weight: 200;
+}
+  
+.card:hover .info-button {
+    opacity: 1; /* Show button on hover */
+    display: block;
+  }
+
+
+
+/* Adjust card width for medium screens */
+@media only screen and (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+}
+
+/* Adjust card width for small screens */
+@media only screen and (max-width: 576px) {
+    .card {
+        width: 90%;
+    }
+}
